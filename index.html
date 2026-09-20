@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Block Craft | Exclusive Minecraft Worlds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-main: #07090E;
+            --bg-card: #0F141C;
+            --bg-glass: rgba(15, 20, 28, 0.85);
+            --emerald: #00FF87;
+            --emerald-glow: rgba(0, 255, 135, 0.35);
+            --emerald-dark: #00B359;
+            --text-main: #FFFFFF;
+            --text-muted: #94A3B8;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-active: rgba(0, 255, 135, 0.5);
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding-bottom: 40px;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glow Background */
+        .ambient-glow {
+            position: fixed;
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            max-width: 600px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 255, 135, 0.15) 0%, rgba(7, 9, 14, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            background: rgba(7, 9, 14, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 1.2rem;
+            box-shadow: 0 0 15px var(--emerald-glow);
+        }
+
+        .brand-name {
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+        }
+
+        .brand-name span {
+            color: var(--emerald);
+        }
+
+        .live-pill {
+            background: rgba(0, 255, 135, 0.1);
+            border: 1px solid rgba(0, 255, 135, 0.3);
+            color: var(--emerald);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .live-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--emerald);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--emerald);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 36px 0 24px;
+        }
+
+        .insta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #E1306C;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #FFF, var(--emerald));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* Section Header */
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 24px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title i {
+            color: var(--emerald);
+        }
+
+        /* Map Grid */
+        .map-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 640px) {
+            .map-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .map-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .map-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .map-card:active {
+            transform: scale(0.98);
+        }
+
+        .map-preview {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .map-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .version-pill {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(7, 9, 14, 0.75);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #FFF;
+        }
+
+        .stats-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(7, 9, 14, 0.85);
+            backdrop-filter: blur(8px);
+            padding: 4px 10px;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--emerald);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .map-details {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .map-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .map-name i {
+            color: #38BDF8;
+            font-size: 0.95rem;
+        }
+
+        .map-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        /* SINGLE MAIN BUTTON PER CARD */
+        .btn-world-download {
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
+            color: #000;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            font-weight: 800;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 20px var(--emerald-glow);
+            transition: all 0.2s ease;
+        }
+
+        .btn-world-download:hover {
+            box-shadow: 0 6px 25px rgba(0, 255, 135, 0.5);
+            transform: translateY(-1px);
+        }
+
+        /* Sleek Instagram Safe Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(4, 6, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @media (min-width: 640px) {
+            .modal-overlay {
+                align-items: center;
+                padding: 20px;
+            }
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-sheet {
+            background: var(--bg-card);
+            border: 1px solid var(--border-active);
+            border-radius: 24px 24px 0 0;
+            width: 100%;
+            max-width: 440px;
+            padding: 24px 20px 32px;
+            transform: translateY(100%);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.5);
+        }
+
+        @media (min-width: 640px) {
+            .modal-sheet {
+                border-radius: 24px;
+                transform: translateY(20px);
+            }
+        }
+
+        .modal-overlay.active .modal-sheet {
+            transform: translateY(0);
+        }
+
+        .modal-drag-handle {
+            width: 40px;
+            height: 4px;
+            background: var(--border);
+            border-radius: 10px;
+            margin: 0 auto 16px;
+        }
+
+        .modal-icon-wrap {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 255, 135, 0.1);
+            border: 1px solid var(--border-active);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--emerald);
+            font-size: 1.8rem;
+            margin: 0 auto 12px;
+        }
+
+        .modal-title {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .modal-subtitle {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .file-info-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+        }
+
+        .file-info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .file-info-item span:first-child {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+        }
+
+        .file-info-item span:last-child {
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* MAIN CPA CONVERSION BUTTON inside Modal */
+        .btn-cpa-action {
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
+            color: #000;
+            text-decoration: none;
+            width: 100%;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 25px var(--emerald-glow);
+            animation: glowPulse 2s infinite;
+        }
+
+        @keyframes glowPulse {
+            0% { box-shadow: 0 0 15px rgba(0, 255, 135, 0.3); }
+            50% { box-shadow: 0 0 25px rgba(0, 255, 135, 0.7); }
+            100% { box-shadow: 0 0 15px rgba(0, 255, 135, 0.3); }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: none;
+            color: var(--text-muted);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .security-notice {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-wrap">
+            <a href="#" class="brand">
+                <div class="brand-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="brand-name">Block <span>Craft</span></div>
+            </a>
+            <div class="live-pill">
+                <div class="live-dot"></div>
+                1.21.x Ready
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="insta-badge">
+                <i class="fab fa-instagram"></i> Featured on Instagram Reels
+            </div>
+            <h1>Download Viral <span>Minecraft Worlds</span></h1>
+            <p>Get instant access to top-trending survival bases, custom cities, and adventure maps for Bedrock & Java.</p>
+        </section>
+
+        <!-- Map List Header -->
+        <div class="section-title">
+            <i class="fas fa-fire"></i> Most Downloaded Worlds
+        </div>
+
+        <!-- Maps Grid -->
+        <div class="map-grid">
+
+            <!-- Card 1 -->
+            <div class="map-card">
+                <div class="map-preview">
+                    <img src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=600&auto=format&fit=crop" alt="Mosslorn Megacity">
+                    <span class="version-pill">Bedrock + Java</span>
+                    <span class="stats-badge"><i class="fas fa-arrow-down"></i> 482k Downloads</span>
+                </div>
+                <div class="map-details">
+                    <div class="map-name">
+                        Mosslorn Overgrown City
+                        <i class="fas fa-circle-check" title="Verified Safe"></i>
+                    </div>
+                    <div class="map-desc">Ultra-detailed post-apocalyptic megacity with fully furnished skyscrapers and secret underground bunkers.</div>
+                    
+                    <!-- Single Main Button -->
+                    <button class="btn-world-download" onclick="openWorldModal('Mosslorn Overgrown City', '142 MB', 'Bedrock & Java')">
+                        <i class="fas fa-file-arrow-down"></i> Download World
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="map-card">
+                <div class="map-preview">
+                    <img src="https://images.unsplash.com/photo-1627856013091-fed6e4e048c7?q=80&w=600&auto=format&fit=crop" alt="Cherry Blossom Castle">
+                    <span class="version-pill">Bedrock (.mcworld)</span>
+                    <span class="stats-badge"><i class="fas fa-arrow-down"></i> 310k Downloads</span>
+                </div>
+                <div class="map-details">
+                    <div class="map-name">
+                        Cherry Blossom Castle
+                        <i class="fas fa-circle-check" title="Verified Safe"></i>
+                    </div>
+                    <div class="map-desc">Aesthetic Japanese survival castle starter map surrounded by custom cherry terrain and automatic farms.</div>
+                    
+                    <!-- Single Main Button -->
+                    <button class="btn-world-download" onclick="openWorldModal('Cherry Blossom Castle', '38 MB', 'Bedrock (.mcworld)')">
+                        <i class="fas fa-file-arrow-down"></i> Download World
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="map-card">
+                <div class="map-preview">
+                    <img src="https://images.unsplash.com/photo-1518066000714-58c45f1a2c0a?q=80&w=600&auto=format&fit=crop" alt="FNAF Pizzeria Map">
+                    <span class="version-pill">Bedrock + Java</span>
+                    <span class="stats-badge"><i class="fas fa-arrow-down"></i> 890k Downloads</span>
+                </div>
+                <div class="map-details">
+                    <div class="map-name">
+                        FNAF Movie Pizzeria 1:1
+                        <i class="fas fa-circle-check" title="Verified Safe"></i>
+                    </div>
+                    <div class="map-desc">Full 1:1 scale movie replica map featuring working redstone security cameras, doors, and custom sound effects.</div>
+                    
+                    <!-- Single Main Button -->
+                    <button class="btn-world-download" onclick="openWorldModal('FNAF Movie Pizzeria 1:1', '76 MB', 'Bedrock & Java')">
+                        <i class="fas fa-file-arrow-down"></i> Download World
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="map-card">
+                <div class="map-preview">
+                    <img src="https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?q=80&w=600&auto=format&fit=crop" alt="Lush Mountain Haven">
+                    <span class="version-pill">Java & Bedrock</span>
+                    <span class="stats-badge"><i class="fas fa-arrow-down"></i> 215k Downloads</span>
+                </div>
+                <div class="map-details">
+                    <div class="map-name">
+                        Lush Mountain Haven
+                        <i class="fas fa-circle-check" title="Verified Safe"></i>
+                    </div>
+                    <div class="map-desc">Custom world generation featuring giant cave waterfalls, 250+ block high mountains, and ancient ruins.</div>
+                    
+                    <!-- Single Main Button -->
+                    <button class="btn-world-download" onclick="openWorldModal('Lush Mountain Haven', '195 MB', 'Java & Bedrock')">
+                        <i class="fas fa-file-arrow-down"></i> Download World
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modal for CPA Locking -->
+    <div class="modal-overlay" id="downloadModal">
+        <div class="modal-sheet">
+            <div class="modal-drag-handle"></div>
+            <button class="close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            
+            <div class="modal-icon-wrap">
+                <i class="fas fa-box-archive"></i>
+            </div>
+            
+            <h3 class="modal-title" id="modalMapTitle">World File Ready</h3>
+            <p class="modal-subtitle">Complete 1 quick verification step below to start your instant world download.</p>
+
+            <div class="file-info-box">
+                <div class="file-info-item">
+                    <span>File Format</span>
+                    <span id="modalFormat">.mcworld / .zip</span>
+                </div>
+                <div class="file-info-item">
+                    <span>File Size</span>
+                    <span id="modalSize">0 MB</span>
+                </div>
+                <div class="file-info-item">
+                    <span>Status</span>
+                    <span style="color: var(--emerald);">Verified Safe</span>
+                </div>
+            </div>
+
+            <!-- INSERT YOUR CPA OFFER / LOCKER LINK HERE -->
+            <a href="YOUR_CPA_LOCKER_LINK_HERE" class="btn-cpa-action" id="cpaBtn" target="_blank">
+                <i class="fas fa-unlock-keyhole"></i> Unlock & Download World
+            </a>
+
+            <div class="security-notice">
+                <i class="fas fa-shield-halved"></i> 100% Virus-Free & Direct Mobile Install
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('downloadModal');
+        const mapTitleEl = document.getElementById('modalMapTitle');
+        const mapSizeEl = document.getElementById('modalSize');
+        const mapFormatEl = document.getElementById('modalFormat');
+
+        function openWorldModal(name, size, format) {
+            mapTitleEl.innerText = name;
+            mapSizeEl.innerText = size;
+            mapFormatEl.innerText = format;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        // Close on background click
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
