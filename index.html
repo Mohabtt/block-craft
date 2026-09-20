@@ -1,546 +1,818 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Block Craft | Premium World Access</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+  <title><data:blog.pageTitle/></title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>
+  <link href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap' rel='stylesheet'/>
+  
+  <!-- ========================================================= -->
+  <!-- ADBLUEMEDIA LOCKER SCRIPT                                 -->
+  <!-- ========================================================= -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'/>
+  <script type='text/javascript'>
+      var BSBJx_cAE_KMSZJc={&quot;it&quot;:3198266,&quot;key&quot;:&quot;9d0ca&quot;};
+      var forward=&quot;&quot;;
+      CPABUILDSETTINGS.onComplete=function(data){
+          window.location=forward;
+          return false;
+      };
+  </script>
+  <script type='text/javascript'>
+      var QAnkp_JJD_aMSgEc={&quot;it&quot;:3198266,&quot;key&quot;:&quot;9d0ca&quot;};
+  </script>
+  <script src='https://d26h1wdc757l2w.cloudfront.net/9aa217c.js'/>
 
-    <!-- Fonts and Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <b:skin><![CDATA[
+    :root {
+        --bg-obsidian: #07090E;
+        --bg-card: rgba(15, 22, 35, 0.92);
+        --bg-card-border: rgba(255, 255, 255, 0.08);
+        --accent-emerald: #10B981;
+        --accent-emerald-light: #34D399;
+        --accent-emerald-glow: rgba(16, 185, 129, 0.35);
+        --accent-gold: #F59E0B;
+        --accent-blue: #3B82F6;
+        --text-primary: #F9FAFB;
+        --text-secondary: #9CA3AF;
+        --status-online: #10B981;
+    }
 
-    <!-- CPA Locker Scripts (Fixed Syntax) -->
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'/>
-<script type='text/javascript'>
-    var BSBJx_cAE_KMSZJc={"it":3198266,"key":"9d0ca"};
-    var forward="";
-    CPABUILDSETTINGS.onComplete=function(data){
-        window.location=forward;
-        return false;
-    };
-</script>
-<script type='text/javascript'>
-    var QAnkp_JJD_aMSgEc={"it":3198266,"key":"9d0ca"};
-</script>
-<script src='https://d26h1wdc757l2w.cloudfront.net/9aa217c.js'/>
-    
-    <style>
-        :root {
-            --bg-main: #07090E;
-            --bg-card: #0F141C;
-            --emerald: #00FF87;
-            --emerald-glow: rgba(0, 255, 135, 0.25);
-            --emerald-dark: #00B359;
-            --text-main: #FFFFFF;
-            --text-muted: #94A3B8;
-            --border: rgba(255, 255, 255, 0.08);
-            --radius-lg: 24px;
-            --radius-md: 16px;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
+    body {
+        background-color: var(--bg-obsidian);
+        color: var(--text-primary);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-image: 
+            radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.18) 0%, transparent 60%),
+            radial-gradient(circle at 85% 90%, rgba(245, 158, 11, 0.06) 0%, transparent 40%),
+            linear-gradient(to bottom, rgba(7, 9, 14, 0.7), #07090E);
+        background-attachment: fixed;
+        overflow-x: hidden;
+    }
 
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-            padding-bottom: 60px;
-        }
+    /* TikTok/IG In-App Browser Warning Banner */
+    .browser-alert {
+        width: 100%;
+        background: linear-gradient(90deg, rgba(59, 130, 246, 0.15), rgba(16, 185, 129, 0.15));
+        border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+        padding: 10px 16px;
+        text-align: center;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: #93C5FD;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
 
-        /* Background Effects */
-        .ambient-glow {
-            position: fixed;
-            top: -20%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100vw;
-            max-width: 800px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 255, 135, 0.12) 0%, rgba(7, 9, 14, 0) 70%);
-            z-index: -1;
-            pointer-events: none;
-        }
+    header {
+        width: 100%;
+        max-width: 1000px;
+        padding: 18px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.45rem;
+        font-weight: 800;
+        letter-spacing: -0.6px;
+        color: #FFFFFF;
+        user-select: none;
+    }
 
-        /* Header */
-        header {
-            padding: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 1px solid var(--border);
-            background: rgba(7, 9, 14, 0.6);
-            backdrop-filter: blur(12px);
-            position: sticky;
-            top: 0;
-            z-index: 50;
-        }
+    .brand-logo {
+        width: 36px;
+        height: 36px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: drop-shadow(0 0 10px var(--accent-emerald-glow));
+    }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
+    .brand-logo svg {
+        width: 100%;
+        height: 100%;
+    }
 
-        .brand-icon {
-            width: 42px;
-            height: 42px;
-            background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #000;
-            font-size: 1.4rem;
-            box-shadow: 0 0 20px var(--emerald-glow);
-        }
+    .brand span { 
+        color: var(--accent-emerald-light);
+        font-weight: 800;
+    }
 
-        .brand-name {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--text-main);
-            letter-spacing: -0.5px;
-        }
+    .server-status {
+        background: rgba(16, 185, 129, 0.08);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        color: var(--accent-emerald);
+        padding: 6px 14px;
+        border-radius: 99px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 
-        .brand-name span { color: var(--emerald); }
+    .pulse-dot {
+        width: 7px;
+        height: 7px;
+        background-color: var(--status-online);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--accent-emerald);
+        animation: pulse 1.6s infinite;
+    }
 
-        /* Main Funnel Focus */
-        .hero-funnel {
-            text-align: center;
-            padding: 40px 0 30px;
-        }
+    .hero-wrapper {
+        width: 100%;
+        max-width: 580px;
+        padding: 0 16px;
+        margin: 10px 0 30px 0;
+    }
 
-        /* Live Activity Banner */
-        .live-activity {
-            background: rgba(0, 255, 135, 0.05);
-            border: 1px solid rgba(0, 255, 135, 0.2);
-            padding: 10px 18px;
-            border-radius: 50px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.85rem;
-            color: var(--emerald);
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
+    .hero-card {
+        background: var(--bg-card);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid var(--bg-card-border);
+        border-radius: 28px;
+        padding: 28px 22px;
+        text-align: center;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 50px var(--accent-emerald-glow);
+        position: relative;
+        overflow: hidden;
+    }
 
-        .live-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--emerald);
-            border-radius: 50%;
-            animation: blink 1s infinite;
-        }
+    .hero-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--accent-emerald), transparent);
+    }
 
-        @keyframes blink { 50% { opacity: 0.3; } }
+    /* Scarcity & Urgency Header Bar */
+    .urgency-bar {
+        background: rgba(245, 158, 11, 0.1);
+        border: 1px dashed rgba(245, 158, 11, 0.3);
+        border-radius: 12px;
+        padding: 8px 12px;
+        font-size: 0.78rem;
+        color: var(--accent-gold);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
 
-        .hero-funnel h1 {
-            font-size: 2.3rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 24px;
-            letter-spacing: -1px;
-        }
-        
-        .hero-funnel h1 span {
-            background: linear-gradient(135deg, #FFF, var(--emerald));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .urgency-timer {
+        background: rgba(245, 158, 11, 0.2);
+        padding: 2px 8px;
+        border-radius: 6px;
+        color: #FFF;
+    }
 
-        /* Stunning Premium Image Showcase */
-        .hero-image-wrap {
-            position: relative;
-            max-width: 500px;
-            margin: 0 auto 35px;
-            padding: 8px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-        }
+    .proof-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.25);
+        color: var(--accent-emerald-light);
+        padding: 5px 12px;
+        border-radius: 99px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        margin-bottom: 14px;
+    }
 
-        .hero-image-wrap img {
-            width: 100%;
-            height: auto;
-            border-radius: calc(var(--radius-lg) - 8px);
-            display: block;
-            aspect-ratio: 16/9;
-            object-fit: cover;
-        }
+    h1 {
+        font-size: 1.9rem;
+        font-weight: 800;
+        line-height: 1.22;
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+    }
 
-        .hero-overlay {
-            position: absolute;
-            top: 8px; left: 8px; right: 8px; bottom: 8px;
-            border-radius: calc(var(--radius-lg) - 8px);
-            background: linear-gradient(to top, rgba(7, 9, 14, 0.95) 0%, transparent 40%);
-            pointer-events: none;
-            display: flex;
-            align-items: flex-end;
-            padding: 20px;
-        }
+    h1 span {
+        background: linear-gradient(135deg, var(--accent-emerald-light), var(--accent-emerald));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-        .hero-overlay-text {
-            text-align: left;
-        }
-        
-        .hero-overlay-text h3 {
-            font-size: 1.2rem;
-            font-weight: 800;
-            margin-bottom: 4px;
-        }
-        
-        .hero-overlay-text p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin: 0;
-        }
+    p.sub-heading {
+        color: var(--text-secondary);
+        font-size: 0.88rem;
+        line-height: 1.5;
+        margin-bottom: 18px;
+    }
 
-        /* Floating Badges */
-        .floating-badge {
-            position: absolute;
-            background: rgba(15, 20, 28, 0.9);
-            backdrop-filter: blur(8px);
-            border: 1px solid var(--border);
-            padding: 8px 14px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-            animation: float 3s ease-in-out infinite;
-        }
+    /* 3-STEP UNLOCK FRAMEWORK */
+    .stepper-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-bottom: 18px;
+        text-align: left;
+    }
 
-        .floating-badge i { color: var(--emerald); font-size: 0.9rem; }
-        .badge-1 { top: -12px; left: -10px; animation-delay: 0s; }
-        .badge-2 { top: -12px; right: -10px; animation-delay: 1.5s; }
+    .step-box {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--bg-card-border);
+        border-radius: 12px;
+        padding: 10px 8px;
+        position: relative;
+    }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
+    .step-box.active {
+        border-color: rgba(16, 185, 129, 0.4);
+        background: rgba(16, 185, 129, 0.05);
+    }
 
-        /* The Single Massive Button */
-        .main-cta-wrapper {
-            position: relative;
-            max-width: 450px;
-            margin: 0 auto 40px;
-        }
+    .step-num {
+        font-size: 0.68rem;
+        font-weight: 800;
+        color: var(--accent-emerald-light);
+        text-transform: uppercase;
+        margin-bottom: 2px;
+    }
 
-        .btn-massive {
-            background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
-            color: #000;
-            border: none;
-            width: 100%;
-            padding: 20px 20px;
-            border-radius: var(--radius-md);
-            font-size: 1.15rem;
-            font-weight: 800;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            box-shadow: 0 10px 30px var(--emerald-glow);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            animation: pulse-button 2.5s infinite;
-        }
+    .step-text {
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.25;
+    }
 
-        .btn-massive:active { transform: scale(0.96); }
-        .btn-massive i { font-size: 1.3rem; }
+    /* Media Preview Box */
+    .media-container {
+        position: relative;
+        width: 100%;
+        height: 190px;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--bg-card-border);
+        margin-bottom: 16px;
+        background: #0E1420;
+    }
 
-        @keyframes pulse-button {
-            0% { box-shadow: 0 0 0 0 rgba(0, 255, 135, 0.4); }
-            70% { box-shadow: 0 0 0 20px rgba(0, 255, 135, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 255, 135, 0); }
-        }
+    .media-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-        /* Trust Steps Section */
-        .trust-section {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 30px 24px;
-            margin-bottom: 40px;
-        }
+    .media-badge {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background: rgba(7, 9, 14, 0.88);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--bg-card-border);
+        color: var(--accent-emerald);
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 8px;
+    }
 
-        .trust-header {
-            text-align: center;
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
+    .media-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(7, 9, 14, 0.95) 0%, transparent 100%);
+        padding: 14px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 
-        .trust-header i { color: #38BDF8; }
+    .build-title {
+        font-weight: 700;
+        font-size: 0.92rem;
+        color: #FFF;
+        text-align: left;
+    }
 
-        .steps-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+    .build-meta {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+    }
 
-        .step-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-        }
+    /* File Metadata Specs */
+    .spec-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-bottom: 18px;
+    }
 
-        .step-number {
-            width: 32px;
-            height: 32px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--emerald);
-            flex-shrink: 0;
-        }
+    .spec-item {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--bg-card-border);
+        padding: 9px 6px;
+        border-radius: 12px;
+        text-align: center;
+    }
 
-        .step-text h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-            color: var(--text-main);
-        }
+    .spec-label {
+        font-size: 0.65rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+    }
 
-        .step-text p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.4;
-        }
+    .spec-value {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: #E5E7EB;
+    }
 
-        /* Modal / Bottom Sheet */
-        .modal-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(4, 6, 10, 0.85);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            z-index: 1000;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
+    .spec-value.green { color: var(--accent-emerald); }
 
-        .modal-overlay.active { opacity: 1; visibility: visible; }
+    /* Explicit Offer Help Box (Maximizes Completion) */
+    .offer-help-box {
+        background: rgba(16, 185, 129, 0.06);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        border-radius: 14px;
+        padding: 12px 14px;
+        font-size: 0.78rem;
+        color: #D1D5DB;
+        text-align: left;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
 
-        .modal-sheet {
-            background: var(--bg-card);
-            border-top: 1px solid rgba(0, 255, 135, 0.3);
-            border-radius: 24px 24px 0 0;
-            width: 100%;
-            max-width: 500px;
-            padding: 24px 24px 40px;
-            transform: translateY(100%);
-            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            text-align: center;
-            position: relative;
-        }
+    .offer-help-icon {
+        background: var(--accent-emerald);
+        color: #000;
+        font-weight: 800;
+        font-size: 0.8rem;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
 
-        .modal-overlay.active .modal-sheet { transform: translateY(0); }
+    /* CTA Button & Glow */
+    .cta-wrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 12px;
+    }
 
-        .modal-drag {
-            width: 40px; height: 4px;
-            background: var(--border);
-            border-radius: 10px;
-            margin: 0 auto 20px;
-        }
+    .cta-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+        color: #FFFFFF;
+        font-size: 1.1rem;
+        font-weight: 800;
+        padding: 18px 20px;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+        box-shadow: 0 10px 28px var(--accent-emerald-glow);
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
 
-        .secure-icon {
-            width: 60px; height: 60px;
-            background: rgba(0, 255, 135, 0.1);
-            border: 1px solid var(--emerald);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            color: var(--emerald);
-            margin: 0 auto 16px;
-        }
+    .cta-btn::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+        transform: rotate(30deg);
+        animation: shine 3.5s infinite;
+    }
 
-        .modal-sheet h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; }
-        .modal-sheet p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.5; }
+    .cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 36px rgba(16, 185, 129, 0.55);
+    }
 
-        /* The Actual CPA Link Button */
-        .btn-cpa {
-            background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
-            color: #000;
-            text-decoration: none;
-            width: 100%;
-            padding: 18px;
-            border-radius: var(--radius-md);
-            font-size: 1.05rem;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
+    .guarantee-note {
+        font-size: 0.74rem;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 18px;
+    }
 
-        .close-btn {
-            position: absolute; top: 20px; right: 20px;
-            background: none; border: none; color: var(--text-muted);
-            font-size: 1.2rem; cursor: pointer;
-        }
-    </style>
+    /* Verified User Mini Reviews / Testimonials */
+    .reviews-section {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--bg-card-border);
+        border-radius: 16px;
+        padding: 14px;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .reviews-title {
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .review-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+    }
+
+    .review-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .review-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        margin-bottom: 2px;
+    }
+
+    .review-user {
+        font-weight: 700;
+        color: #E5E7EB;
+    }
+
+    .review-badge {
+        color: var(--accent-emerald-light);
+        font-size: 0.7rem;
+    }
+
+    .review-text {
+        font-size: 0.76rem;
+        color: var(--text-secondary);
+        line-height: 1.3;
+    }
+
+    .ticker-wrapper {
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid var(--bg-card-border);
+        font-size: 0.78rem;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .ticker-highlight {
+        color: var(--accent-emerald-light);
+        font-weight: 700;
+    }
+
+    /* Floating Real-Time Completion Toast */
+    .toast-container {
+        position: fixed;
+        bottom: 18px;
+        left: 18px;
+        z-index: 999;
+        pointer-events: none;
+    }
+
+    .toast {
+        background: rgba(15, 22, 35, 0.95);
+        border: 1px solid var(--accent-emerald);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+        backdrop-filter: blur(12px);
+        padding: 10px 14px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+        color: #FFF;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .toast.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .toast-icon {
+        width: 24px;
+        height: 24px;
+        background: rgba(16, 185, 129, 0.2);
+        color: var(--accent-emerald);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+    }
+
+    footer {
+        padding: 24px 20px;
+        color: var(--text-secondary);
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .main-section { display: none; }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.35; transform: scale(0.9); }
+    }
+
+    @keyframes shine {
+        0% { transform: translateX(-100%) rotate(30deg); }
+        20%, 100% { transform: translateX(100%) rotate(30deg); }
+    }
+
+    @media (max-width: 480px) {
+        .hero-card { padding: 22px 14px; border-radius: 22px; }
+        h1 { font-size: 1.55rem; }
+        .stepper-container { gap: 5px; }
+        .step-box { padding: 8px 5px; }
+        .step-text { font-size: 0.68rem; }
+        .media-container { height: 160px; }
+        .spec-grid { gap: 5px; }
+        .spec-value { font-size: 0.76rem; }
+        .toast-container { left: 10px; right: 10px; }
+        .toast { width: 100%; }
+    }
+  ]]></b:skin>
 </head>
 <body>
 
-    <div class="ambient-glow"></div>
+  <!-- TikTok/Instagram WebView Notification Banner -->
+  <div class='browser-alert'>
+      <span>💡 TikTok/IG User? Tap <b>&quot;...&quot;</b> top-right &amp; select <b>&quot;Open in Browser&quot;</b> for fastest download speed.</span>
+  </div>
 
-    <header>
-        <a href="#" class="brand">
-            <div class="brand-icon"><i class="fas fa-cube"></i></div>
-            <div class="brand-name">Block <span>Craft</span></div>
-        </a>
-    </header>
+  <header>
+      <div class='brand'>
+          <div class='brand-logo'>
+              <svg fill='none' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'>
+                  <path d='M18 2L32 10V12L18 20L4 12V10L18 2Z' fill='url(#grad-top)'/>
+                  <path d='M4 12L18 20V34L4 26V12Z' fill='url(#grad-left)'/>
+                  <path d='M18 20L32 12V26L18 34V20Z' fill='url(#grad-right)'/>
+                  <defs>
+                      <linearGradient id='grad-top' x1='4' x2='32' y1='2' y2='20'>
+                          <stop stop-color='#34D399'/>
+                          <stop offset='1' stop-color='#10B981'/>
+                      </linearGradient>
+                      <linearGradient id='grad-left' x1='4' x2='18' y1='12' y2='34'>
+                          <stop stop-color='#059669'/>
+                          <stop offset='1' stop-color='#047857'/>
+                      </linearGradient>
+                      <linearGradient id='grad-right' x1='18' x2='32' y1='12' y2='34'>
+                          <stop stop-color='#10B981'/>
+                          <stop offset='1' stop-color='#065F46'/>
+                      </linearGradient>
+                  </defs>
+              </svg>
+          </div>
+          Block<span>Craft</span>
+      </div>
+      
+      <div class='server-status'>
+          <div class='pulse-dot'/>
+          Node #1 Active
+      </div>
+  </header>
 
-    <main class="container">
-        
-        <section class="hero-funnel">
-            <div class="live-activity" id="liveUsers">
-                <div class="live-dot"></div>
-                <span>47 users currently downloading</span>
-            </div>
+  <div class='hero-wrapper'>
+      <main class='hero-card'>
+          
+          <!-- Urgent Scarcity Header -->
+          <div class='urgency-bar'>
+              <span>⚡ Free Access Reserved For You</span>
+              <span>Expires In: <strong class='urgency-timer' id='timer'>04:59</strong></span>
+          </div>
 
-            <h1>Instant Access to <span>Premium Worlds</span></h1>
+          <div class='proof-badge'>
+              ★ 4.9/5 Rating &#8226; 18,490+ Downloads Today
+          </div>
 
-            <!-- Image Showcase Section -->
-            <div class="hero-image-wrap">
-                <img src="preview.png" alt="Premium Minecraft World">
-                
-                <div class="hero-overlay">
-                    <div class="hero-overlay-text">
-                        <h3>Full Vault Unlocked</h3>
-                        <p>1.21+ Compatibility for Bedrock & Java</p>
-                    </div>
-                </div>
+          <h1>Instant Access to Premium <span>Minecraft World</span></h1>
+          <p class='sub-heading'>Complete Survival World Save &amp; Litematic Schematics</p>
 
-                <div class="floating-badge badge-1">
-                    <i class="fas fa-star"></i> 5.0 Rated
-                </div>
-                <div class="floating-badge badge-2">
-                    <i class="fas fa-download"></i> 1.2M+ Saves
-                </div>
-            </div>
+          <!-- 3-Step Psychological Pre-Framing -->
+          <div class='stepper-container'>
+              <div class='step-box'>
+                  <div class='step-num'>STEP 1</div>
+                  <div class='step-text'>Click Download Below</div>
+              </div>
+              <div class='step-box active'>
+                  <div class='step-num'>STEP 2</div>
+                  <div class='step-text'>Complete 1 Free Offer (30s)</div>
+              </div>
+              <div class='step-box'>
+                  <div class='step-num'>STEP 3</div>
+                  <div class='step-text'>World .ZIP Unlocks</div>
+              </div>
+          </div>
 
-            <div class="main-cta-wrapper">
-                <button class="btn-massive" onclick="openModal()">
-                    <i class="fas fa-unlock-keyhole"></i> Unlock Premium Vault
-                </button>
-            </div>
-        </section>
+          <!-- Build Preview Card -->
+          <div class='media-container'>
+              <img alt='Minecraft Build Preview' src='https://images.unsplash.com/photo-1627856013091-fed6e4e30025?auto=format&amp;fit=crop&amp;w=800&amp;q=80'/>
+              <div class='media-badge'>✓ Verified Clean Build</div>
+              <div class='media-info'>
+                  <div>
+                      <div class='build-title'>Ultimate Survival Base v4.2</div>
+                      <div class='build-meta'>Java &amp; Bedrock Cross-Save</div>
+                  </div>
+              </div>
+          </div>
 
-        <!-- Trust & Security Steps -->
-        <section class="trust-section">
-            <div class="trust-header">
-                <i class="fas fa-shield-check"></i> Safe Download Process
-            </div>
-            
-            <div class="steps-container">
-                <div class="step-row">
-                    <div class="step-number">1</div>
-                    <div class="step-text">
-                        <h4>Request Access</h4>
-                        <p>Click the unlock button to securely connect to our world server.</p>
-                    </div>
-                </div>
-                <div class="step-row">
-                    <div class="step-number">2</div>
-                    <div class="step-text">
-                        <h4>Quick Verification (Bot Protection)</h4>
-                        <p>Complete a quick 30-second app install or profile task to prove you are human. This keeps our servers fast and free.</p>
-                    </div>
-                </div>
-                <div class="step-row">
-                    <div class="step-number">3</div>
-                    <div class="step-text">
-                        <h4>Instant Auto-Import</h4>
-                        <p>The .mcworld file drops directly into your device. Tap it to auto-launch Minecraft!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <!-- Technical Specs Grid -->
+          <div class='spec-grid'>
+              <div class='spec-item'>
+                  <div class='spec-label'>FILE SIZE</div>
+                  <div class='spec-value'>48.2 MB</div>
+              </div>
+              <div class='spec-item'>
+                  <div class='spec-label'>VERSION</div>
+                  <div class='spec-value'>1.21.x Ready</div>
+              </div>
+              <div class='spec-item'>
+                  <div class='spec-label'>VIRUS SCAN</div>
+                  <div class='spec-value green'>0/64 Clean</div>
+              </div>
+          </div>
 
-    </main>
+          <!-- Explicit Offer Completion Helper Box -->
+          <div class='offer-help-box'>
+              <div class='offer-help-icon'>!</div>
+              <div>
+                  <strong style='color:#FFF;'>How to get your file:</strong> Complete <b>1 sponsor offer</b> (install a free app or submit email) to verify you're human. Your download will start automatically right after.
+              </div>
+          </div>
 
-    <!-- Secure CPA Gateway Modal -->
-    <div class="modal-overlay" id="downloadModal">
-        <div class="modal-sheet">
-            <div class="modal-drag"></div>
-            <button class="close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
-            
-            <div class="secure-icon">
-                <i class="fas fa-user-shield"></i>
-            </div>
-            
-            <h3>Bot Protection Active</h3>
-            <p>To access the Block Craft Premium Vault, please complete 1 quick free verification step to confirm you are a real player.</p>
+          <!-- Main CTA Download Button (Fires _eN Locker) -->
+          <div class='cta-wrapper'>
+              <button class='cta-btn' id='downloadCTA' onclick='_eN()'>
+                  <span>Download World Files (.ZIP)</span>
+              </button>
+          </div>
 
-            <button class='btn-cpa' onclick='_eN()'>Verify & Download Now</button>
-            
-            
-            <p style="font-size: 0.75rem; margin-top: 15px; margin-bottom: 0;">
-                <i class="fas fa-lock"></i> AES-256 Encrypted Connection
-            </p>
-        </div>
-    </div>
+          <div class='guarantee-note'>
+              <span>🔒 256-Bit SSL Encrypted</span> &#8226; <span>⚡ High-Speed Node</span> &#8226; <span>💯 100% Free</span>
+          </div>
 
-    <script>
-        // Modal Logic
-        const modal = document.getElementById('downloadModal');
-        
-        function openModal() {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Stop background scrolling
-        }
+          <!-- Mini Verified Reviews Section -->
+          <div class='reviews-section'>
+              <div class='reviews-title'>
+                  <span>Recent Successful Unlocks</span>
+                  <span style='color: var(--accent-emerald-light);'>✓ 100% Verified</span>
+              </div>
+              <div class='review-item'>
+                  <div class='review-header'>
+                      <span class='review-user'>CraftKing_99</span>
+                      <span class='review-badge'>✓ Unlocked via App Offer</span>
+                  </div>
+                  <div class='review-text'>took literally 30 sec after installing the app. base map is insane!!</div>
+              </div>
+              <div class='review-item'>
+                  <div class='review-header'>
+                      <span class='review-user'>Liam_Minecraft</span>
+                      <span class='review-badge'>✓ Unlocked via Email Offer</span>
+                  </div>
+                  <div class='review-text'>worked on my phone, imports right into Bedrock. thanks!</div>
+              </div>
+          </div>
 
-        function closeModal() {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-        }
+          <!-- Live Activity Feed -->
+          <div class='ticker-wrapper'>
+              <span>⚡ <span class='ticker-highlight' id='liveUser'>Alex_Craft</span> unlocked <span class='ticker-highlight' id='liveBuild'>Survival Base v4.2</span> (8s ago)</span>
+          </div>
 
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) closeModal();
-        });
+      </main>
+  </div>
 
-        // Fake Live User Counter
-        setInterval(() => {
-            const users = Math.floor(Math.random() * (89 - 42 + 1) + 42);
-            document.querySelector('#liveUsers span').innerText = `${users} users currently downloading`;
-        }, 4500);
-    </script>
+  <!-- Floating Live Completion Toast -->
+  <div class='toast-container'>
+      <div class='toast' id='liveToast'>
+          <div class='toast-icon'>✓</div>
+          <div>
+              <div><strong id='toastUser'>Marcus_MC</strong> just completed an offer!</div>
+              <div style='color: var(--text-secondary); font-size: 0.68rem;'>World .ZIP file downloaded (12s ago)</div>
+          </div>
+      </div>
+  </div>
+
+  <b:section class='main-section' id='main' showaddelement='yes'/>
+
+  <footer>
+      <p>Block Craft Repository &#8226; Independent Minecraft Resource</p>
+  </footer>
+
+  <script type='text/javascript'>
+  //<![CDATA[
+      // Live Countdown Timer
+      function startTimer(duration, display) {
+          let timer = duration, minutes, seconds;
+          setInterval(function () {
+              minutes = parseInt(timer / 60, 10);
+              seconds = parseInt(timer % 60, 10);
+
+              minutes = minutes < 10 ? "0" + minutes : minutes;
+              seconds = seconds < 10 ? "0" + seconds : seconds;
+
+              display.textContent = minutes + ":" + seconds;
+
+              if (--timer < 0) {
+                  timer = duration;
+              }
+          }, 1000);
+      }
+
+      window.onload = function () {
+          const fiveMinutes = 60 * 4 + 59;
+          const display = document.querySelector('#timer');
+          if(display) startTimer(fiveMinutes, display);
+      };
+
+      // Ticker and Floating Notification System
+      const users = ['Alex_Craft', 'Steve_99', 'BlockMaster', 'PixelKing', 'EnderKnight', 'RedstoneGuy', 'VoxelQueen', 'Marcus_MC', 'GamerGuy21', 'CraftyGirl'];
+      const builds = ['Survival Base v4.2', 'Mega Castle Pack', 'Redstone Storage Unit', 'Nether Hub Schematics'];
+
+      setInterval(() => {
+          const userElem = document.getElementById('liveUser');
+          const buildElem = document.getElementById('liveBuild');
+          
+          if(userElem && buildElem) {
+              const randomUser = users[Math.floor(Math.random() * users.length)];
+              const randomBuild = builds[Math.floor(Math.random() * builds.length)];
+              const randomSec = Math.floor(Math.random() * 20) + 2;
+              
+              userElem.textContent = randomUser;
+              buildElem.textContent = `${randomBuild} (${randomSec}s ago)`;
+          }
+      }, 3500);
+
+      // Floating Toast Popups
+      function showToast() {
+          const toast = document.getElementById('liveToast');
+          const toastUser = document.getElementById('toastUser');
+          if(!toast || !toastUser) return;
+
+          const randomUser = users[Math.floor(Math.random() * users.length)];
+          toastUser.textContent = randomUser;
+
+          toast.classList.add('show');
+          setTimeout(() => {
+              toast.classList.remove('show');
+          }, 4000);
+      }
+
+      setInterval(showToast, 9000);
+  //]]>
+  </script>
+
 </body>
 </html>
